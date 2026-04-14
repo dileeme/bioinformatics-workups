@@ -58,7 +58,7 @@ def parse_newick(s: str) -> Node:
             i += len(label)
 
     if len(stack) != 1 or isinstance(stack[0], str):
-        raise ValueError('Malformed Newick, stack=%r' % stack)
+        raise ValueError('Malformed newick, stack=%r' % stack)
     return stack[0]
 
 
