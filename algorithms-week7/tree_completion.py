@@ -27,6 +27,6 @@ def min_edges_to_tree(n, edges):
     return components - 1
 
 n = 10
-edges = [(1, 2), (2, 8), (4, 10), (5, 9), (6, 10), (7, 9)]
+edges = [(1, 3), (2, 8), (4, 9), (5, 9), (6, 10), (7, 9)]
 
 print(min_edges_to_tree(n, edges))
