@@ -33,5 +33,5 @@ def dna_translate(dna):
 
     return protein
 
-dna_sequence = "ATACTCGGATTCGATTCTATATCGTTATGATGAUUGTUGATGTGGTCTTCT" 
+dna_sequence = "ATACTCGGACTCGATTCTATATCGTTATGATGAUUGTUGATGTGGTCTTCT" 
 print(dna_translate(dna_sequence))
