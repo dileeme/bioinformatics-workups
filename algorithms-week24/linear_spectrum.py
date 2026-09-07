@@ -1,0 +1,21 @@
+mass_table = {
+    "G": 57, "A": 71, "S": 87, "P": 97, "V": 99, "T": 101, "C": 103,
+    "I": 113, "L": 113, "N": 114, "D": 115, "K": 128, "Q": 128,
+    "E": 129, "M": 131, "H": 137, "F": 147, "R": 156, "Y": 163, "W": 186,
+}
+
+def linear_spectrum(peptide):
+    masses = [mass_table[a] for a in peptide]
+    n = len(masses)
+    prefix = [0] * (n + 1)
+    for i in range(n):
+        prefix[i + 1] = prefix[i] + masses[i]
+    spectrum = [0]
+    for i in range(n):
+        for j in range(i + 1, n + 1):
+            spectrum.append(prefix[j] - prefix[i])
+    return sorted(spectrum)
+
+peptide = "NQEL"
+
+print(" ".join(str(m) for m in linear_spectrum(peptide)))
